@@ -1,0 +1,102 @@
+// Global
+h3 {
+    text-align: center;
+    
+}
+
+// Buttons
+.btn {
+    padding: .4rem 1rem;
+    border:2px solid black;
+    border-radius: 10px;
+    background-color: grey;
+    color:black;
+}
+
+.btn:hover {
+    background-color: black;
+    color: white;
+}
+
+// Form
+.form {
+    padding: 10px;
+    border-bottom: 2px solid black;
+    text-align: center;
+}
+
+.form input {
+    background-color:white;
+}
+
+.save span {
+    font-size: .9rem;
+}
+
+.todo-text {
+    padding: 5px 10px;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-right: 5px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+}
+
+// Task List
+.list {
+    color: black;
+    padding-right: 10px;
+}
+
+.todo-list {
+    display: flex;
+    list-style-type: none;
+    background-color: darkgray;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.todo-list-item {
+    flex-grow: 1;
+}
+
+.fa-check {
+    color: green;
+    padding: 0 5px;
+    margin-right: 10px;
+    border: 2px solid green;
+    border-radius: 5px;
+}
+
+.fa-times {
+    color: red;
+    padding: 0 5px;
+    margin-right: 10px;
+    border: 2px solid red;
+    border-radius: 5px;
+}
+
+.fa-check:hover {
+    color: grey;
+    background-color: green;
+}
+
+.fa-times:hover {
+    color: grey;
+    background-color: red;
+}
+
+// Completed
+
+.todo-list-complete {
+    display: flex;
+    list-style-type: none;
+    background-color: darkgray;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.todo-list-item-complete {
+    flex-grow: 1;
+}
+

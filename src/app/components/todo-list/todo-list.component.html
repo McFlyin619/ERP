@@ -1,0 +1,23 @@
+<div class="form">
+    <h3>To Do List</h3>
+
+    <input class="todo-text"type="text" [(ngModel)]='todoText'>
+    <button class="save btn" (click)='addTodo()'><span>Add Task</span></button>
+
+</div>
+
+<div class="list">
+    <h3>Tasks</h3>
+        <ul class="todo-list" *ngFor='let item of todos'>
+            <li class="todo-list-item">{{ item }}</li>
+            <span class="fas fa-check complete" (click)="addComplete(item)"></span>
+            <span class="fas fa-times remove" (click)="remove(item)"></span>
+        </ul>
+</div>
+<div class="complete">
+    <h3>Completed Tasks</h3>
+        <ul class="todo-list-complete" *ngFor='let item of completed'>
+            <li class="todo-list-item-complete">{{ item }}</li>
+            <span class="fas fa-times remove" (click)="removeCompleted(item)"></span>
+        </ul>
+</div>
