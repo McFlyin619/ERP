@@ -9,7 +9,7 @@ h3 {
     padding: .4rem 1rem;
     border:2px solid black;
     border-radius: 10px;
-    background-color: grey;
+    background-color: rgb(204, 204, 204);
     color:black;
 }
 
@@ -45,7 +45,7 @@ h3 {
 // Task List
 .list {
     color: black;
-    padding-right: 10px;
+    padding: 0px 10px;
 }
 
 .todo-list {
@@ -70,7 +70,7 @@ h3 {
 
 .fa-times {
     color: red;
-    padding: 0 5px;
+    padding: 0 10px;
     margin-right: 10px;
     border: 2px solid red;
     border-radius: 5px;

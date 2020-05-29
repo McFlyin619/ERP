@@ -4,8 +4,10 @@ app-todo-list {
     width: 75%;
     border: 2px solid black;
     border-radius: 10px;
-    background-color:grey;
-    text-shadow: 1px 1px 1px rgb(173, 173, 173);
+    background-color:rgb(204, 204, 204);
+    text-shadow: 0px 4px 5px rgb(85, 85, 85);
     margin: 0 14rem;
+    -webkit-box-shadow: 1px 7px 15px 5px #858585; 
+    box-shadow: 1px 7px 15px 5px #858585;
 }
 
