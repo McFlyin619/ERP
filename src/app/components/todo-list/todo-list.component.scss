@@ -6,7 +6,7 @@ h3 {
 
 // Buttons
 .btn {
-    padding: .4rem 1rem;
+    font-size: 1rem;
     border:2px solid black;
     border-radius: 10px;
     background-color: rgb(204, 204, 204);
@@ -23,6 +23,7 @@ h3 {
     padding: 10px;
     border-bottom: 2px solid black;
     text-align: center;
+    background-color: rgb(204, 204, 204);
 }
 
 .form input {
@@ -62,7 +63,7 @@ h3 {
 
 .fa-check {
     color: green;
-    padding: 0 5px;
+    padding: 10px;
     margin-right: 10px;
     border: 2px solid green;
     border-radius: 5px;
@@ -70,7 +71,7 @@ h3 {
 
 .fa-times {
     color: red;
-    padding: 0 10px;
+    padding: 10px;
     margin-right: 10px;
     border: 2px solid red;
     border-radius: 5px;
@@ -94,6 +95,7 @@ h3 {
     background-color: darkgray;
     padding: 10px;
     border-radius: 10px;
+    margin: 10px;
 }
 
 .todo-list-item-complete {

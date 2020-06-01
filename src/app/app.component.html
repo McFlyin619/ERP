@@ -1,17 +1,5 @@
-<h1>Hello from Angular</h1>
-<h3>{{ title }}</h3>
+<!-- Header -->
+<app-nav-bar></app-nav-bar> 
 
-<button (click)="test()">Click me!</button>
-
-<h4>Count: {{ count }}</h4>
-
-<button (click)='increaseCount()'>Plus one!</button>
-
-<hr>
-
-Type something: <input type="text"[(ngModel)]='inputText'>
-
-<h4>{{ inputText }}</h4>
+<!-- Page Content -->
 <router-outlet></router-outlet>
-<hr>
-<app-todo-list></app-todo-list>

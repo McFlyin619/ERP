@@ -24,7 +24,7 @@ export class TodoListComponent implements OnInit {
 
   remove(item) {
     console.log('wants to remove', item);
-    this.todos = this.todos.filter(val => val != item);
+    this.todos = this.todos.filter(id => id != item);
   }
 
   addComplete(item) {
@@ -33,7 +33,7 @@ export class TodoListComponent implements OnInit {
   }
 
   removeCompleted(item) {
-    this.completed = this.completed.filter(val => val != item);
+    this.completed = this.completed.filter(id => id != item);
   }
 
 }

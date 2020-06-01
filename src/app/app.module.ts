@@ -6,11 +6,17 @@ import { AppComponent } from './app.component';
 
 import { FormsModule} from '@angular/forms';
 import { TodoListComponent } from './components/todo-list/todo-list.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { TempConverterComponent } from './components/temp-converter/temp-converter.component';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TodoListComponent
+    TodoListComponent,
+    NavBarComponent,
+    TempConverterComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
