@@ -1,21 +1,31 @@
 // Global
+body  {
+    // background-color: #17a2b8;
+}
+
 h3 {
     text-align: center;
-    
+    color: white;
+    text-shadow: 3px 3px 4px grey;
+}
+
+.wb {
+    color: #17a2b8;
+    text-shadow: 3px 3px 4px grey;
 }
 
 // Buttons
 .btn {
     font-size: 1rem;
-    border:2px solid black;
+    border:2px solid white;
     border-radius: 10px;
-    background-color: rgb(204, 204, 204);
-    color:black;
+    background-color: #17a2b8;
+    color:white;
 }
 
 .btn:hover {
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: #17a2b8;
 }
 
 // Form
@@ -23,7 +33,7 @@ h3 {
     padding: 10px;
     border-bottom: 2px solid black;
     text-align: center;
-    background-color: rgb(204, 204, 204);
+    background-color: #17a2b8;
 }
 
 .form input {
@@ -45,16 +55,18 @@ h3 {
 
 // Task List
 .list {
-    color: black;
+    color: white;
     padding: 0px 10px;
 }
 
 .todo-list {
     display: flex;
     list-style-type: none;
-    background-color: darkgray;
+    background-color: #17a2b8;
     padding: 10px;
     border-radius: 10px;
+    -webkit-box-shadow: 1px 10px 9px 5px #5a5a5a; 
+    box-shadow: 1px 10px 9px 5px #5a5a5a;
 }
 
 .todo-list-item {
@@ -62,29 +74,28 @@ h3 {
 }
 
 .fa-check {
-    color: green;
+    color: white;
     padding: 10px;
     margin-right: 10px;
-    border: 2px solid green;
+    // border: 2px solid green;
     border-radius: 5px;
 }
 
 .fa-times {
-    color: red;
+    color: white;
     padding: 10px;
     margin-right: 10px;
-    border: 2px solid red;
+    // border: 2px solid white;
     border-radius: 5px;
 }
 
 .fa-check:hover {
-    color: grey;
-    background-color: green;
+    color: green;
 }
 
 .fa-times:hover {
-    color: grey;
-    background-color: red;
+    color: rgb(255, 0, 0);
+    
 }
 
 // Completed
@@ -93,9 +104,12 @@ h3 {
     display: flex;
     list-style-type: none;
     background-color: darkgray;
+    color: grey;
     padding: 10px;
     border-radius: 10px;
     margin: 10px;
+    -webkit-box-shadow: 1px 10px 9px 5px #5a5a5a; 
+    box-shadow: 1px 10px 9px 5px #5a5a5a;
 }
 
 .todo-list-item-complete {
