@@ -9,6 +9,9 @@ import { TodoListComponent } from './components/todo-list/todo-list.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { TempConverterComponent } from './components/temp-converter/temp-converter.component';
 import { AboutComponent } from './components/about/about.component';
+import { UserRegisterComponent } from './components/user-register/user-register.component';
+import { UserListComponent } from './components/user-list/user-list.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { AboutComponent } from './components/about/about.component';
     TodoListComponent,
     NavBarComponent,
     TempConverterComponent,
-    AboutComponent
+    AboutComponent,
+    UserRegisterComponent,
+    UserListComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
