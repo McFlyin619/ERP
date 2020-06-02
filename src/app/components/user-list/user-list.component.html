@@ -1,5 +1,29 @@
-<h2>We are working on this page</h2>
+<div class="container-fluid">
+    <h2>We are working on this page</h2>
 
-<h4>there are: {{ allUsers.length }} user(s) in the service</h4>
-<h5>Users</h5>
-<p *ngFor='let user of allUsers'>{{ user.firstName }}</p>
+    <h4>{{ allUsers.length }} user(s) in the service</h4>
+</div>
+<div class="container-fluid">
+    <table class="table table-hover table-dark">
+        <thead>
+        <tr>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">User Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Address</th>
+            <th scope="col">Phone Number</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor='let user of allUsers' class="bg-info">
+            <td>{{ user.firstName }}</td>
+            <td>{{ user.lastName }}</td>
+            <td>{{ user.userName }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.address }}</td>
+            <td>{{ user.phoneNumber }}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
