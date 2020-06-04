@@ -4,29 +4,35 @@
         <div class="form-row">
             <div class="form-group col-md-6">
               <label for="">First Name</label>
-              <input type="text" name="firstName" class="form-control" id="firstName" [(ngModel)]='model.firstName'>
+              <input type="text" name="firstName" class="form-control {{ model.firstName == '' ? 'error' : '' }}" id="firstName" [(ngModel)]='model.firstName'>
             </div>
             <div class="form-group col-md-6">
               <label for="">Last Name</label>
-              <input type="text" name="lastName"   class="form-control" id="lastName" [(ngModel)]="model.lastName">
+              <input type="text" name="lastName"   class="form-control {{ model.lastName == '' ? 'error' : '' }}" id="lastName" [(ngModel)]="model.lastName">
             </div>
           </div>
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="">User Name</label>
-                <input type="text" name="userName" class="form-control" id="userName" [(ngModel)]="model.userName">
+                <input type="text" name="userName" class="form-control {{ model.userName == '' ? 'error' : '' }}" id="userName" [(ngModel)]="model.userName">
             </div>
             <div class="form-group col-md-6">
                 <label for="">Email</label>
-                <input type="email" name="email" class="form-control" id="email" [(ngModel)]='model.email'>
+                <input type="email" name="email" class="form-control {{ model.email && model.email != '' && model.email.indexOf('@') == -1 ? 'error' : '' }}" id="email"  [(ngModel)]='model.email'>
+                <div>
+                    <small *ngIf="model.email && model.email != '' && model.email.indexOf('@') == -1">Please enter a valid email</small>
+                </div>
             </div>
             <div class="form-group col-md-6">
                 <label for="">Password</label>
-                <input type="password" name="password" class="form-control" id="password" [(ngModel)]='model.password'>
+                <input type="password" name="password" class="form-control {{ model.password && retypePassword && model.password != retypePassword ? 'error' : ''}}" id="password" [(ngModel)]='model.password'>
             </div>
             <div class="form-group col-md-6">
                 <label for="">Retype Password</label>
-                <input type="password" name="retype" class="form-control" id="password2" [(ngModel)]='retypePassword'>
+                <input type="password" name="retype" class="form-control {{ model.password && retypePassword && model.password != retypePassword ? 'error' : ''}}" id="password2" [(ngModel)]='retypePassword'>
+                <div>
+                    <small *ngIf="model.password && retypePassword && model.password != retypePassword">Passwords do not match</small>
+                </div>
             </div>
         </div>
         <div class="form-group">
@@ -37,6 +43,11 @@
             <label for="">Phone Number</label>
             <input type="text" name="phoneNumber" class="form-control" id="phoneNumber" [(ngModel)]='model.phoneNumber'>
         </div>
-        <button id="saveBtn" type="button" class="btn btn-block btn-outline-light" (click)='save()'>Save User</button>
+        <div>
+            <button id="saveBtn" type="button" [disabled]="!model.firstName || !model.lastName || !model.userName || !model.email || !model.password || model.password != retypePassword" class="btn btn-block btn-outline-light" (click)='save()'>Save User</button>
+            <div class="alert alert-success" role="alert" *ngIf="isAlertVisible">
+                The User has been Registered!
+            </div>
+        </div>
     </form>
 </div>

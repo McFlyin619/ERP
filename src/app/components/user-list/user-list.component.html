@@ -1,29 +1,36 @@
 <div class="container-fluid">
-    <h2>We are working on this page</h2>
+    <h2>User List</h2>
+    <div class="container-fluid">
+        <table class="table table-bordered table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">User Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Phone Number</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let user of allUsers; let i = index' id='row_{{i}}' class="bg-info">
+                    <td (keyup)="changeValue('firstName', $event)" contenteditable="true">{{ user.firstName }}</td>
+                    <td (keyup)="changeValue('lastName', $event)" contenteditable="true">{{ user.lastName }}</td>
+                    <td (keyup)="changeValue('userName', $event)" contenteditable="true">{{ user.userName }}</td>
+                    <td (keyup)="changeValue('email', $event)" contenteditable="true">{{ user.email }}</td>
+                    <td (keyup)="changeValue('address', $event)" contenteditable="true">{{ user.address }}</td>
+                    <td (keyup)="changeValue('phoneNumber', $event)" contenteditable="true">{{ user.phoneNumber }}</td>
+                    <td class="col-end" >
+                        <!-- <button (click)="editUser(user)" class="btn btn-sm btn-outline-light">Edit</button> -->
+                        <button (click)="removeUser(user)" class="btn btn-sm btn-danger">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
 
-    <h4>{{ allUsers.length }} user(s) in the service</h4>
-</div>
-<div class="container-fluid">
-    <table class="table table-hover table-dark">
-        <thead>
-            <tr>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">User Name</th>
-                <th scope="col">Email</th>
-                <th scope="col">Address</th>
-                <th scope="col">Phone Number</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor='let user of allUsers' class="bg-info">
-                <td>{{ user.firstName }}</td>
-                <td>{{ user.lastName }}</td>
-                <td>{{ user.userName }}</td>
-                <td>{{ user.email }}</td>
-                <td>{{ user.address }}</td>
-                <td>{{ user.phoneNumber }}</td>
-            </tr>
-        </tbody>
-    </table>
+        <div class="count">
+            <p *ngIf="allUsers.length == 1"> {{ allUsers.length }} user is registered!</p>
+            <p *ngIf="allUsers.length > 1">{{ allUsers.length }} users are registered!</p>
+        </div>
 </div>

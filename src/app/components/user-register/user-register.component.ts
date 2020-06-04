@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/models/user';
 import { DataService } from 'src/app/services/data.service';
 
+
 @Component({
   selector: 'app-user-register',
   templateUrl: './user-register.component.html',
@@ -10,8 +11,10 @@ import { DataService } from 'src/app/services/data.service';
 export class UserRegisterComponent implements OnInit {
 
   model: User = new User();
-  retypePassword = '';
+  retypePassword = undefined;
+  isAlertVisible = false;
 
+ 
   // in constructor you INJECT the services
   constructor(private dataSrv: DataService) { }
 
@@ -23,8 +26,11 @@ export class UserRegisterComponent implements OnInit {
 
     // clear the form
     this.model = new User();
-    this.retypePassword = '';
+    this.retypePassword = undefined;
+    this.isAlertVisible = true;
+    setTimeout(() => {
+      this.isAlertVisible = false;
+    }, 2000);
   }
-
 
 }

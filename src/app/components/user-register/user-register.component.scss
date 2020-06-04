@@ -9,8 +9,27 @@ form {
     color: white;
     padding: 30px;
     margin-top: 20px;
+    border: 5px solid #343a40;
     border-radius: 15px;
     text-shadow: 2px 2px 2px rgb(71, 71, 71);
     -webkit-box-shadow: 1px 16px 15px 5px #5a5a5a; 
     box-shadow: 1px 16px 15px 5px #5a5a5a;
+}
+
+.alert {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px gray !important;
+    margin-top: 2rem;
+}
+
+small {
+    color: rgb(255, 146, 146);
+    font-size: 1rem;
+    text-shadow: 1px 1px 2px black;
+}
+
+.error {
+    border: 4px solid red;
 }

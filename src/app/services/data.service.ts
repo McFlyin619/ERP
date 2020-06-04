@@ -6,16 +6,28 @@ import { User } from '../models/user';
 })
 export class DataService {
 
-  private data = [];  
+  private userList = [];  
 
   
-  constructor() { }
+  constructor() {
+    // when the class is created
+    var admin = new User();
+    admin.firstName = 'OBrien';
+    admin.lastName = 'McQuade'; 
+    admin.userName = 'Admin';
+    admin.password = 'Padres2020';
+    this.userList.push(admin);
+   }
 
   public saveUser(user: User) {
-    this.data.push(user);
+    this.userList.push(user);
   }
 
   public getAllUsers() {
-    return this.data;
+    return this.userList;
+  }
+
+  public deleteUser(user) {
+    this.userList = this.userList.filter(val => val != user);
   }
 }
