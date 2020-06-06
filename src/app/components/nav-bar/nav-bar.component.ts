@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SharedService } from 'src/app/services/shared.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavBarComponent implements OnInit {
 
-  constructor() { }
+  constructor(public shared: SharedService, private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  onIconClick() {
+    this.shared.logOut();
+    this.router.navigate(['/user/login']);
   }
 
 }

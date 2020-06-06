@@ -5,29 +5,38 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav mr-auto">
             <li class="nav-item">
                 <a class="nav-link" routerLink="/">Home </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" routerLink="/todo">To Do List</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="/converter">Temp Converter</a>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link" routerLink="/about">About</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="/user/create">Register</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="/user/list">User List</a>
-            </li>
-            <li class="nav-item">
+            <li *ngIf="!shared.isUserLoggedIn" class="nav-item">
                 <a class="nav-link" routerLink="/user/login">Login</a>
             </li>
+            <li *ngIf="shared.isUserLoggedIn" class="nav-item">
+                <a class="nav-link" routerLink="/user/create">Register</a>
+            </li>
+            <li *ngIf="shared.isUserLoggedIn" class="nav-item">
+                <a class="nav-link" routerLink="/user/list">User List</a>
+            </li>
+            <li *ngIf="shared.isUserLoggedIn" class="nav-item">
+                <a class="nav-link" routerLink="/todo">To Do List</a>
+            </li>
+            <li *ngIf="shared.isUserLoggedIn" class="nav-item">
+                <a class="nav-link" routerLink="/converter">Temp Converter</a>
+            </li>
         </ul>
+        <a *ngIf="shared.isUserLoggedIn" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-user-circle"></i>
+             Welcome: {{ shared.userName }}
+        </a>
+          <div *ngIf="shared.isUserLoggedIn" class="dropdown-menu dropdown-menu-right text-center">
+                <a class="dropdown-item" (click)="onIconClick()">
+                    Log Out
+                </a>
+          </div>
     </div>
-    </nav>
+</nav>
 

@@ -1,13 +1,15 @@
-<div class="content">
+<div class="container">
     <h3>Temperature Converter</h3>
-    <div class="converter">
-        <div class="block">
-            <label for="Fahrenheit">Fahrenheit</label>
-            <input type="number" name="f" id="fahrenheit" [(ngModel)]="fahrenheit" (ngModelChange)="convertToC()">
+    <form>
+        <div class="form-row justify-content-around">
+            <div class="form-group col-md-2">
+                <label for="Fahrenheit">Fahrenheit</label>
+                <input class="form-control" type="number" name="f" id="fahrenheit" [(ngModel)]="fahrenheit" (ngModelChange)="convertToC()">
+            </div>
+            <div class="form-group col-md-2">
+                <label for="Celsius">Celsius</label>
+                <input class="form-control" type="number" name="C" id="celsius" [(ngModel)]="celsius" (ngModelChange)="convertToF()">
+            </div>
         </div>
-        <div class="block">
-            <label for="Celsius">Celsius</label>
-            <input type="number" name="C" id="celsius" [(ngModel)]="celsius" (ngModelChange)="convertToF()">
-        </div>
-    </div>
+    </form>
 </div>

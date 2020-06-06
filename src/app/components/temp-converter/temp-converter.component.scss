@@ -1,48 +1,26 @@
-
 h3 {
     font-size: 3rem;
     text-align: center;
-    text-shadow: 2px 2px 3px grey;
+    text-shadow: 2px 2px 3px gray;
 }
 
-.converter {
-    display: flex;
-    justify-content: space-evenly;
-    font-size: 2rem;
-    margin: 3rem;
-}
-
-.block {
-    display: inline;
-    text-shadow: 2px 2px 3px grey;
-    border-radius: 20px;
-    padding: 50px;
-    -webkit-box-shadow: 4px -4px 15px 0px #FF1F1F, 12px -11px 7px 0px #FF9376, 20px -5px 7px 0px #FFE264, 20px 6px 7px 0px #F6FF33, 13px 12px 17px 0px #FF9527, 2px 17px 17px 0px #FF0000, -9px 21px 18px 0px #FFF212, -9px 6px 11px 0px #FF0808, -11px -9px 11px 0px #FFFA17, -11px -9px 11px 0px #FFFA17, 5px 5px 15px 5px rgba(0,0,0,0); 
-    box-shadow: 4px -4px 15px 0px #FF1F1F, 12px -11px 7px 0px #FF9376, 20px -5px 7px 0px #FFE264, 20px 6px 7px 0px #F6FF33, 13px 12px 17px 0px #FF9527, 2px 17px 17px 0px #FF0000, -9px 21px 18px 0px #FFF212, -9px 6px 11px 0px #FF0808, -11px -9px 11px 0px #FFFA17, -11px -9px 11px 0px #FFFA17, 5px 5px 15px 5px rgba(0,0,0,0);
-    
-}
-
-.block label {
-    margin-right: 2rem;
-}
-
-.block input {
-    border-right-width: 5px;
-    border-right-style: solid;
-    border-right-color: #0024FF;
-    border-radius: 21px 0px 10px 0px;
-    border-left-width: 5px;
-    border-left-style: solid;
-    border-left-color: #FF0000;
-    border-radius: 21px 0px 10px 0px;
-    border-top-width: 5px;
-    border-top-style: solid;
-    border-top-color: #FF0000;
-    border-radius: 40px 0px 40px 0px;
-    border-bottom-width: 5px;
-    border-bottom-style: solid;
-    border-bottom-color: #0024FF;
-    border-radius: 40px 0px 40px 0px;
+form {
+    background-color: #17a2b8;
+    color: white;
     padding: 1rem;
-    text-shadow: 2px 2px 3px grey;
+    border: 5px solid #343a40;
+    border-radius: 10px;
+    text-align: center;
+    -webkit-box-shadow: 1px 16px 15px 5px #5a5a5a; 
+    box-shadow: 1px 16px 15px 5px #5a5a5a;
+
+    label {
+        font-size: 2rem;
+        text-shadow: 2px 2px 3px grey;
+    }
+
+    input {
+        font-size: 1.5rem;
+        text-align: center;
+    }
 }

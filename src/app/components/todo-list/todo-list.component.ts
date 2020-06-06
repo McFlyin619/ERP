@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SharedService } from 'src/app/services/shared.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-todo-list',
@@ -11,9 +13,12 @@ export class TodoListComponent implements OnInit {
   todos: string[] = [];
   completed: string[] = [];
 
-  constructor() { }
+  constructor(private shared: SharedService, private router: Router) { }
 
   ngOnInit(): void {
+    if(!this.shared.isUserLoggedIn) {
+      this.router.navigate(['/user/login']);
+    }
   }
 
   addTodo() {

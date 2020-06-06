@@ -15,7 +15,8 @@ export class DataService {
     admin.firstName = 'OBrien';
     admin.lastName = 'McQuade'; 
     admin.userName = 'Admin';
-    admin.password = 'Padres2020';
+    admin.email = 'admin@g.com';
+    admin.password = '123';
     this.userList.push(admin);
    }
 

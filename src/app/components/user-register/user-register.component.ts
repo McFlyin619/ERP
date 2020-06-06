@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/models/user';
 import { DataService } from 'src/app/services/data.service';
+import { SharedService } from 'src/app/services/shared.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -16,9 +18,12 @@ export class UserRegisterComponent implements OnInit {
 
  
   // in constructor you INJECT the services
-  constructor(private dataSrv: DataService) { }
+  constructor(private dataSrv: DataService, private shared: SharedService, private router: Router) { }
 
   ngOnInit(): void {
+    if(!this.shared.isUserLoggedIn) {
+      this.router.navigate(['/user/login']);
+    }
   }
 
   save() {
